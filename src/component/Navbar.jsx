@@ -1,10 +1,12 @@
 import React from 'react';
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 
 function Navbar() {
+  const {logout} = useAuth0();
 
   return (
     <nav className="navbar">
@@ -21,7 +23,13 @@ function Navbar() {
              <NavLink to="/profile">Profile</NavLink>
              </li>
              <li>
+             <NavLink to="/rmMemories">ReminiscingMemories</NavLink>
+             </li>
+             <li>
              <NavLink to="/login">Admin Dashboard</NavLink>
+             </li>
+             <li>
+             <button onClick={() => logout({logoutParams:{returnTo:window.location.origin}})}>Log Out</button>
              </li>
 
 
