@@ -10,8 +10,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     clientId="tTjtqE755qY72KDFAfp6tZXfCATVKknB"
     // redirectUri =  {window.location.origin}
     authorizationParams={{
-      redirect_uri: window.location.origin
+      // redirect_uri: window.location.origin
+      redirect_uri: 'http://localhost:5173/home'
     }}
+    
   >
     <App />
   </Auth0Provider>,
