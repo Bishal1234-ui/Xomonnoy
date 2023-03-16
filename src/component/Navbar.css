@@ -29,17 +29,20 @@
 .navbar-list {
   display: flex;
   list-style-type: none;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
 .navbar-list li {
   margin-right: 20px;
+  justify-content: space-between;
 }
 
 .navbar-list li a {
   color: #eaeef1;
   text-decoration: none;
+  justify-content: space-between;
   font-size: 18px;
   font-weight: bold;
 }

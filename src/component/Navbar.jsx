@@ -16,8 +16,16 @@ function Navbar() {
          <ul className="navbar-list">
            <li>
              <NavLink to="/home">Home</NavLink>
+             </li>
+             <li>
              <NavLink to="/profile">Profile</NavLink>
-           </li>
+             </li>
+             <li>
+             <NavLink to="/Admin">Admin Dashboard</NavLink>
+             </li>
+
+
+           
               
            </ul>
            </div>
