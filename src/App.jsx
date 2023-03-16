@@ -7,6 +7,8 @@ import Header from './component/Header';
 import Footer from './component/Footer';
 import Profile from './component/Profile';
 import AlumniHome from './Alumni/AlumniHome';
+import Login from './Auth/login';
+import Signup from './Auth/signup';
 
 const App = () => {
   return (
@@ -18,6 +20,11 @@ const App = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/profile" element={<Profile />} />
       <Route path='/Admin' element={<AlumniHome/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/login/signup' element={<Signup/>}/>
+      <Route path='/AlumniHome' element={<AlumniHome/>}/>
+
+      
       
       </Routes>
       <Footer/>

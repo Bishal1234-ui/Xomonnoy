@@ -21,7 +21,7 @@ function Navbar() {
              <NavLink to="/profile">Profile</NavLink>
              </li>
              <li>
-             <NavLink to="/Admin">Admin Dashboard</NavLink>
+             <NavLink to="/login">Admin Dashboard</NavLink>
              </li>
 
 
