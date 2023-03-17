@@ -31,72 +31,95 @@ const AlumniHome = () => {
         ...jobs.docs.map((doc) => ({ ...doc.data(), id: doc.id })),
       ]);
     };
-  
+
     getPosts();
   });
 
   const containerStyle = {
-    width: "200px",
-    height: "200px",
+    width: "auto",
+    height: "auto",
     backgroundColor: "#f5f5f5",
     border: "1px solid #ddd",
     padding: "10px",
   };
 
+  const ScrollableContainer1 = {
+    height: "400px" /* set the height of the container */,
+    width: "300px",
+    overflowY: "scroll" /* enable vertical scrolling */,
+    border: "1px solid #ccc" /* add a border to the container */,
+    padding: "10px" /* add some padding to the container */,
+  };
+
+  const ScrollableContainer2 = {
+    height: "400px" /* set the height of the container */,
+    width: "300px",
+    overflowY: "scroll" /* enable vertical scrolling */,
+    border: "1px solid #ccc" /* add a border to the container */,
+    padding: "10px" /* add some padding to the container */,
+  };
+
   return (
     <div className="homePage">
       <AHeader />
-      <div class="max-w-md mx-auto mt-4 overflow-y-scroll max-h-80 border border-gray-200 p-4 xl:w-1/4 md:w-1/2 w-full">
-        <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
-          <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">
-            NOTICE
-          </h2>
+      <li></li>
 
-          {postLists.map((post) => {
-            return (
-              <div style={containerStyle}>
-                <div className="post">
-                  <div className="postTextContainer">
-                    {" "}
-                    <h2>{post.bodyText}</h2>{" "}
-                  </div>
-                  <h5>
-                  {post.name}
-                  {post.batch}
-                  </h5>
-                </div>
-              </div>
-            );
-          })}
+      <div class="Container" style={ScrollableContainer1}>
+        <div
+          style={{
+            backgroundColor:
+              "#f2f2f2" /* set the background color of the box */,
+            border: "1px solid #ccc" /* add a border to the box */,
+            borderRadius: "50px",
+            padding: "10px" /* add some padding to the box */,
+          }}
+        >
+          <h2 style={{ margin: "0" }}>Notice Board</h2>
         </div>
+
+        {postLists.map((post) => {
+          return (
+            <div style={containerStyle} className="post">
+              <div className="postTextContainer">
+                <h2>{post.bodyText}</h2>
+              </div>
+              <h5>
+                {post.name}
+                {post.batch}
+              </h5>
+            </div>
+          );
+        })}
       </div>
 
+      <div class="Container2" style={ScrollableContainer2}>
+        <div
+          style={{
+            backgroundColor:"#f2f2f2" /* set the background color of the box */,
+            border: "1px solid #ccc" /* add a border to the box */,
+            borderRadius: "50px",
+            padding: "10px" /* add some padding to the box */,
+          }}
+        >
+          <h2 style={{ margin: "0" }}>Job Notification</h2>
+        </div>
 
-      
-      <div class="max-w-md mx-auto mt-4 overflow-y-scroll max-h-80 border border-gray-200 p-4 xl:w-1/4 md:w-1/2 w-full">
-        <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
-          <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">
-            Job Notification
-          </h2>
-
-          {postLists.map((post) => {
-            return (
-              <div style={containerStyle}>
-                <div className="post">
-                  <div className="postTextContainer">
-                    {" "}
-                    <h2>{post.title1}</h2>{" "}
-                    <h3>{post.bodyText1}</h3>{" "}
-                  </div>
-                  <h5>
+        {postLists.map((post) => {
+          return (
+            <div style={containerStyle}>
+              <div className="post">
+                <div className="postTextContainer">
+                  <h2>{post.title1}</h2>
+                  <h3>{post.bodyText1}</h3>
+                </div>
+                <h5>
                   {post.name1}
                   {post.batch1}
-                  </h5>
-                </div>
+                </h5>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

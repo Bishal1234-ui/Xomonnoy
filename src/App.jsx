@@ -13,6 +13,8 @@ import NoticeWrite from './Apages/noticeWrite';
 import Jobnotification from './Apages/jobnotification';
 import RmMemories from './Alumni/rmMemories';
 import Writerm from './Alumni/writerm';
+import Directories from './directories';
+
 
 
 const App = () => {
@@ -33,6 +35,10 @@ const App = () => {
       <Route path='/jobnotification' element={<Jobnotification/>}/>
       <Route path='/rmMemories' element={<RmMemories/>}/>
       <Route path='/writerm' element={<Writerm/>}/>
+      <Route path='/directories' element={<Directories/>}/>
+      
+
+
 
 
       
